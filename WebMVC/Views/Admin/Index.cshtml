@@ -1,0 +1,71 @@
+﻿@using Entities.Concrete.DbEntities
+@model List<Movie>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox ">
+            <div class="ibox-title">
+                <h5>Basic Table</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#" class="dropdown-item">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Director</th>
+                            <th>Released</th>
+                            <th>Genre</th>
+                            <th>Language</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Title</td>
+                                <td>@item.Director</td>
+                                <td>@item.Released</td>
+                                <td>@item.Genre</td>
+                                <td>@item.Language</td>
+                                <td>
+                                    <a href="/Movie/DeleteMovie/@item.Id" class="btn btn-danger">Sil</a>
+                                    <a href="/Movie/EditMovie/@item.Id" class="btn btn-primary">Düzenle</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Movie/AddMovie" class="btn btn-info">Yeni Kayıt</a>
+            </div>
+        </div>
+    </div>
+
+</div>

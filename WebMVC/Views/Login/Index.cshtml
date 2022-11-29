@@ -1,0 +1,41 @@
+﻿@model Entities.Dto.UserLoginDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!-- Login Section Begin -->
+<section class="login spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="login__form">
+                    <h3>Login</h3>
+                    <p class="text-center" style="color: red">@TempData["ErrorMessage"]</p>
+                    @using (Html.BeginForm("Index","Login",FormMethod.Post))
+                    {
+                        <div class="input__item">
+                            <input type="text"  name="Email" placeholder="Email address">
+                            <span class="icon_mail"></span>
+                        </div>
+                        <div class="input__item">
+                            <input type="text" name="Password" placeholder="Password">
+                            <span class="icon_lock"></span>
+                        </div>
+                        <button type="submit" class="site-btn">Login Now</button>
+                    }
+                    <a href="#" class="forget_pass">Forgot Your Password?</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="login__register">
+                    <h3>Dont’t Have An Account?</h3>
+                    <a href="/Register/Index" class="primary-btn">Register Now</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- Login Section End -->
+

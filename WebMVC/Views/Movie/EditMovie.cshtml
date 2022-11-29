@@ -1,0 +1,83 @@
+﻿@model Entities.Concrete.DbEntities.Movie
+@{
+    ViewData["Title"] = "EditMovie";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Movie Edit Page</h1>
+@using (Html.BeginForm("EditMovie","Movie",FormMethod.Post))
+{
+    @Html.Label("Movie Id")
+    @Html.TextBoxFor(x=>x.Id, new {@class="form-control"})
+    <br />
+    @Html.Label("Title")
+    @Html.TextBoxFor(x=>x.Title, new {@class="form-control"})
+    <br />
+    @Html.Label("Year")
+    @Html.TextBoxFor(x=>x.Year, new {@class="form-control"})
+    <br />
+    @Html.Label("Rated")
+    @Html.TextBoxFor(x=>x.Rated, new {@class="form-control"})
+    <br />
+    @Html.Label("Released")
+    @Html.TextBoxFor(x=>x.Released, new {@class="form-control"})
+    <br />
+    @Html.Label("Runtime")
+    @Html.TextBoxFor(x=>x.Runtime, new {@class="form-control"})
+    <br />
+    @Html.Label("Genre")
+    @Html.TextBoxFor(x=>x.Genre, new {@class="form-control"})
+    <br />
+    @Html.Label("Director")
+    @Html.TextBoxFor(x=>x.Director, new {@class="form-control"})
+    <br />
+    @Html.Label("Writer")
+    @Html.TextBoxFor(x=>x.Writer, new {@class="form-control"})
+    <br />
+    @Html.Label("Actors")
+    @Html.TextBoxFor(x=>x.Actors, new {@class="form-control"})
+    <br />
+    @Html.Label("Language")
+    @Html.TextBoxFor(x=>x.Language, new {@class="form-control"})
+    <br />
+    @Html.Label("Country")
+    @Html.TextBoxFor(x=>x.Country, new {@class="form-control"})
+    <br />
+    @Html.Label("Awards")
+    @Html.TextBoxFor(x=>x.Awards, new {@class="form-control"})
+    <br />
+    @Html.Label("Imdb Rating")
+    @Html.TextBoxFor(x=>x.imdbRating, new {@class="form-control"})
+    <br />
+    @Html.Label("Imdb Votes")
+    @Html.TextBoxFor(x=>x.imdbVotes, new {@class="form-control"})
+    <br />
+    @Html.Label("Imdb Id")
+    @Html.TextBoxFor(x=>x.imdbID, new {@class="form-control"})
+    <br />
+    @Html.Label("Type")
+    @Html.TextBoxFor(x=>x.Type, new {@class="form-control"})
+    <br />
+    @Html.Label("DVD")
+    @Html.TextBoxFor(x=>x.DVD, new {@class="form-control"})
+    <br />
+    @Html.Label("Box Office")
+    @Html.TextBoxFor(x=>x.BoxOffice, new {@class="form-control"})
+    <br />
+    @Html.Label("Production")
+    @Html.TextBoxFor(x=>x.Production, new {@class="form-control"})
+    <br />
+    @Html.Label("Web Site")
+    @Html.TextBoxFor(x=>x.Website, new {@class="form-control"})
+    <br />
+    @Html.Label("Plot")
+    @Html.TextAreaFor(x=>x.Plot, new {@class="form-control"})
+    <br />
+    @Html.Label("Poster Url")
+    @Html.TextBoxFor(x=>x.Poster, new {@class="form-control"})
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+    <br />
+    <br />
+}
+

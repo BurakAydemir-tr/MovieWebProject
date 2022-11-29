@@ -1,0 +1,85 @@
+﻿@model Entities.Concrete.DbEntities.Movie
+@{
+    ViewData["Title"] = "AddMovie";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Add Movie</h1>
+
+@using (Html.BeginForm("AddMovie", "Movie", FormMethod.Post))
+{
+    @Html.Label("Title")
+    @Html.TextBoxFor(x=>x.Title, new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.Title)
+    <br />
+    @Html.Label("Year")
+    @Html.TextBoxFor(x=>x.Year, new {@class="form-control"})
+    <br />
+    @Html.Label("Rated")
+    @Html.TextBoxFor(x=>x.Rated, new {@class="form-control"})
+    <br />
+    @Html.Label("Released")
+    @Html.TextBoxFor(x=>x.Released, new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.Released)
+    <br />
+    @Html.Label("Runtime")
+    @Html.TextBoxFor(x=>x.Runtime, new {@class="form-control"})
+    <br />
+    @Html.Label("Genre")
+    @Html.TextBoxFor(x=>x.Genre, new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.Genre)
+    <br />
+    @Html.Label("Director")
+    @Html.TextBoxFor(x=>x.Director, new {@class="form-control"})
+    <br />
+    @Html.Label("Writer")
+    @Html.TextBoxFor(x=>x.Writer, new {@class="form-control"})
+    <br />
+    @Html.Label("Actors")
+    @Html.TextBoxFor(x=>x.Actors, new {@class="form-control"})
+    <br />
+    @Html.Label("Language")
+    @Html.TextBoxFor(x=>x.Language, new {@class="form-control"})
+    <br />
+    @Html.Label("Country")
+    @Html.TextBoxFor(x=>x.Country, new {@class="form-control"})
+    <br />
+    @Html.Label("Awards")
+    @Html.TextBoxFor(x=>x.Awards, new {@class="form-control"})
+    <br />
+    @Html.Label("Imdb Rating")
+    @Html.TextBoxFor(x=>x.imdbRating, new {@class="form-control"})
+    <br />
+    @Html.Label("Imdb Votes")
+    @Html.TextBoxFor(x=>x.imdbVotes, new {@class="form-control"})
+    <br />
+    @Html.Label("Imdb Id")
+    @Html.TextBoxFor(x=>x.imdbID, new {@class="form-control"})
+    <br />
+    @Html.Label("Type")
+    @Html.TextBoxFor(x=>x.Type, new {@class="form-control"})
+    <br />
+    @Html.Label("DVD")
+    @Html.TextBoxFor(x=>x.DVD, new {@class="form-control"})
+    <br />
+    @Html.Label("Box Office")
+    @Html.TextBoxFor(x=>x.BoxOffice, new {@class="form-control"})
+    <br />
+    @Html.Label("Production")
+    @Html.TextBoxFor(x=>x.Production, new {@class="form-control"})
+    <br />
+    @Html.Label("Web Site")
+    @Html.TextBoxFor(x=>x.Website, new {@class="form-control"})
+    <br />
+    @Html.Label("Plot")
+    @Html.TextAreaFor(x=>x.Plot, 10, 3, new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.Plot)
+    <br />
+    @Html.Label("Poster Url")
+    @Html.TextBoxFor(x=>x.Poster, new {@class="form-control"})
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+    <br />
+    <br />
+}
+
